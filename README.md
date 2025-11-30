@@ -159,7 +159,7 @@ qui sont exécutées dans un environnement NodeJs classique ; et les [Edge Funct
 qui tournent sur un environnement Javascript allégé (pour de meilleurs performances).
 Jusqu'à présent, la version Edge suffisait ; mais pour la gestion des messages, on aura besoin de la version Serverless.
 
-Un exemple de squelette est fourni [message.js](api/message.js) et sera à compléter.<br/>
+Un exemple de squelette est fourni [messages.js](api/messages.js) et sera à compléter.<br/>
 Plusieurs différences sont à noter :
 
  - La Serverless Function prend en paramètre un objet `reponse` sur lequel il faut appeler les fonctions `send()` ou `json()` pour renvoyer une réponse.
@@ -248,7 +248,7 @@ const beamsClient = new PushNotifications({
 Les variables d'environnement Pusher sont à configurer sur votre poste et sur votre projet Vercel.
 On utilise l'externalId de l'utilisateur pour l'identifier auprès du service.
 
-Dans le service [message.js](api/message.js), envoyer une notification Push à l'utilisateur destinataire du message
+Dans le service [messages.js](api/messages.js), envoyer une notification Push à l'utilisateur destinataire du message
 ```javascript
 const publishResponse = await beamsClient.publishToUsers([targetUser.externalId], {
     web: {

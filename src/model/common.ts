@@ -11,7 +11,22 @@ export interface User {
     last_login?: string;
     external_id?: string;
 }
+export interface Message {
+    message_id: number;
+    sender_id: number;
+    receiver_id: number;
+    content?: string;
+    media_url?: string;
+    media_type?: "image" | "video";
+    created_on: string;
+}
 
+export interface Room {
+    room_id: number;
+    name: string;
+    created_on: string;
+    created_by: number;
+}
 export interface Session {
     token: string;
     username?: string;
