@@ -24,6 +24,7 @@ function App() {
         <Router>
             <Nav isLoggedIn={isLoggedIn} logout={handleLogout} />
             <Routes>
+                <Route path="/" element={<Login onLogin={handleLogin} />} />
                 <Route path="/login" element={<Login onLogin={handleLogin} />} />
                 <Route path="/messages" element={<Messages session={session} chatWithId={2} />} />
                 <Route path="/register" element={<Register />} />
